@@ -1,5 +1,5 @@
 import { Table, TableBody } from "baseUI/table";
-import { useViewModel } from "../useViewModel";
+import useViewModel from "./useViewModel";
 import { TableColumn } from "./components/tableColumn";
 import { TableRow } from "./components/tableRow";
 
@@ -11,7 +11,7 @@ export const OverallPage = () => {
       <Table>
         <TableColumn />
         <TableBody>
-          {data.map((entry, index) => (
+          {data?.map((entry, index) => (
             <TableRow
               data={entry}
               index={index}
